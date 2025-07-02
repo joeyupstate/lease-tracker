@@ -90,14 +90,37 @@ export default function EditLeasePage() {
         />
 </div>
 <div className="form-row">
-        <label>Monthly Rent</label>
+        <label>Square Footage</label>
         <input
-          type="number"
-          name="monthly_rent"
-          value={form.monthly_rent || ''}
+        
+          name="square_footage"
+          value={form.square_footage || ''}
           onChange={handleChange}
         />
 </div>
+
+
+
+<div className="form-row">
+        <label>Monthly Rent</label>
+        <input
+        //   type="number"
+          name="rental_rate"
+          value={form.rental_rate || ''}
+          onChange={handleChange}
+        />
+</div>
+<div className="form-row">
+        <label>Annual Rent</label>
+        <input
+        //   type="number"
+          name="annual_rent"
+          value={form.annual_rent || ''}
+          onChange={handleChange}
+        />
+</div>
+
+
 
 <div className="form-row">
         <label>Renewal Options</label>

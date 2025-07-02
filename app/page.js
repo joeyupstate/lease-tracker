@@ -59,10 +59,11 @@ export default function HomePage() {
   const leasesToDisplay = mode === 'search' || mode === 'all' ? results : []
 
   return (
-    <div style={{ padding: '2rem' }}>
+    <div className="front-page">
+        <div className="front-container">
       <h1>Lease Tracker</h1>
 
-      <div style={{ margin: '1rem 0' }}>
+   
         <input
           type="text"
           placeholder="Search leases by property or tenant..."
@@ -71,7 +72,9 @@ export default function HomePage() {
           style={{ padding: '0.5rem', width: '300px' }}
         />
 
+<div className="front-buttons">
         <button
+        className='blue-button'
           onClick={handleViewAll}
           style={{ marginLeft: '1rem', padding: '0.5rem 1rem' }}
         >
@@ -79,9 +82,11 @@ export default function HomePage() {
         </button>
 
         <Link href="/add" style={{ marginLeft: '1rem' }}>
-          <button style={{ padding: '0.5rem 1rem' }}>Add Lease</button>
+          <button className="black-button"style={{ padding: '0.5rem 1rem' }}>Add Lease</button>
         </Link>
       </div>
+
+      
 
       {mode !== 'idle' && (
         leasesToDisplay.length === 0 ? (
@@ -112,6 +117,7 @@ export default function HomePage() {
           </ul>
         )
       )}
+    </div>
     </div>
   )
 }

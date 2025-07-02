@@ -1,10 +1,71 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
 h1{
- font-size: 30px;
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+font-size: 30px;
+    font-style: normal;
+    color:#2f4784;
+  
+}
+h2{
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+
+    font-style: normal;
+    color:#2f4784;
 }
 
 .tenant-link{
     text-decoration: none;
 }
+
+
+
+/* front page */
+
+.front-page{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height:100vh;
+
+}
+
+.front-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.front-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:10px;
+  
+}
+
+.front-buttons button{
+border-radius: 10px;
+border:none;
+min-width: 100px;
+font-family: "Space Grotesk", sans-serif;
+}
+
+.blue-button{
+    background-color:#2f4784 ;
+    color:white
+}
+
+.black-button{
+    background-color:#3C5BAA;
+    color:white
+}
+
+
 
 /* add page */
 form.lease-form {
@@ -59,6 +120,34 @@ form.lease-form {
     align-items: center;
     gap: 1rem;
   }
+
+  form.lease-form-inline .form-row:nth-of-type(8){
+flex-direction: column;
+align-items: flex-start;
+
+  }
+
+  @media (min-width: 700px) {
+    /* … */
+    form.lease-form-inline .form-row:nth-of-type(8){
+        flex-direction: row;
+        align-items: center;
+        
+          }
+  }
+
+
+  form.lease-form-inline .form-row:nth-of-type(9){
+    flex-direction: column;
+    align-items: flex-start;
+      }
+      
+      @media (min-width: 700px) {
+        form.lease-form-inline .form-row:nth-of-type(9){
+            flex-direction:row;
+            align-items: center;
+              }
+            }
   
   form.lease-form-inline label {
     width: 160px;
