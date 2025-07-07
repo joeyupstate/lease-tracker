@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { supabase } from '../lib/supabaseClient'
 import "./styles/globalstyles.css";
+import AuthGuard from "./components/AuthGuard"
 
 export default function HomePage() {
   const [leases, setLeases] = useState([])
@@ -59,6 +60,7 @@ export default function HomePage() {
   const leasesToDisplay = mode === 'search' || mode === 'all' ? results : []
 
   return (
+    <AuthGuard>
     <div className="front-page">
         <div className="front-container">
       <h1>Lease Tracker</h1>
@@ -119,5 +121,6 @@ export default function HomePage() {
       )}
     </div>
     </div>
+      </AuthGuard>
   )
 }

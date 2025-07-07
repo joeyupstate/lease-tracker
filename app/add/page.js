@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation'
 import { supabase } from '../../lib/supabaseClient'
 import "../styles/globalstyles.css"
 import Link from 'next/link'
+import AuthGuard from '../components/AuthGuard'
 
 export default function AddLeasePage() {
   const router = useRouter()
@@ -36,7 +37,7 @@ export default function AddLeasePage() {
   }
 
   return (
-    
+      <AuthGuard>
     <div style={{ padding: '2rem' }}>
 
 <Link href="/">
@@ -86,5 +87,6 @@ export default function AddLeasePage() {
         <button type="submit">Submit</button>
       </form>
     </div>
+    </AuthGuard>
   )
 }
