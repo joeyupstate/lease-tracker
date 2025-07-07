@@ -63,7 +63,7 @@ export default function HomePage() {
     <AuthGuard>
     <div className="front-page">
         <div className="front-container">
-      <h1>Lease Trajjjjjjcker</h1>
+      <h1>Lease Tracker</h1>
 
    
         <input
