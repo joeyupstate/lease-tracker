@@ -19,6 +19,7 @@ h2{
 
 .tenant-link{
     text-decoration: none;
+    color:black;
 }
 
 
@@ -56,12 +57,24 @@ font-family: "Space Grotesk", sans-serif;
 }
 
 .blue-button{
-    background-color:#2f4784 ;
-    color:white
+    background-color:#2f4784 !important;
+    color:white;
+    outline:1px solid #2f4784 !important;
+    border:1px solid white!important;
+}
+.blue-button:hover{
+   background-color:#3C5BAA!important;
 }
 
-.black-button{
-    background-color:#3C5BAA;
+.light-blue-button{
+    background-color:#3C5BAA!important;
+    color:white;
+    outline:1px solid #3C5BAA!important;
+    border:1px solid white!important;
+}
+
+.light-blue-button:hover{
+    background-color:#2f4784 !important;
     color:white
 }
 

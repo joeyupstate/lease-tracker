@@ -82,7 +82,7 @@ export default function HomePage() {
         </button>
 
         <Link href="/add" style={{ marginLeft: '1rem' }}>
-          <button className="black-button"style={{ padding: '0.5rem 1rem' }}>Add Lease</button>
+          <button className="light-blue-button"style={{ padding: '0.5rem 1rem' }}>Add Lease</button>
         </Link>
       </div>
 
@@ -98,7 +98,7 @@ export default function HomePage() {
                 <Link href={`/edit/${lease.id}`} className="tenant-link">
                   <strong>{lease.tenant_name}</strong> — {lease.property_address}
                 </Link>
-                <button
+                {/* <button
                   onClick={() => handleDelete(lease.id)}
                   style={{
                     marginLeft: '1rem',
@@ -111,7 +111,7 @@ export default function HomePage() {
                   }}
                 >
                   Delete
-                </button>
+                </button> */}
               </li>
             ))}
           </ul>

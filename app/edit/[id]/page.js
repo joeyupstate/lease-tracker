@@ -35,13 +35,27 @@ export default function EditLeasePage() {
 
   if (!form) return <p style={{ padding: '2rem' }}>Loading...</p>
 
+
+  const handleDelete = async () => {
+    const confirmDelete = window.confirm('Are you sure you want to delete this lease?')
+    if (!confirmDelete) return
+  
+    const { error } = await supabase.from('leases').delete().eq('id', id)
+    if (!error) {
+      router.push('/')
+    } else {
+      alert('Failed to delete lease. Check console.')
+      console.error(error)
+    }
+  }
+
   return (
     <div style={{ padding: '2rem' }}>
       <Link href="/">
-        <button style={{
+        <button className="blue-button" style={{
           marginBottom: '1rem',
           padding: '0.5rem 1rem',
-          backgroundColor: '#ccc',
+    
           border: 'none',
           borderRadius: '4px',
           cursor: 'pointer'
@@ -99,6 +113,15 @@ export default function EditLeasePage() {
         />
 </div>
 
+<div className="form-row">
+        <label>Rental Rate sqf/year</label>
+        <input
+        //   type="number"
+          name="rental_rate_per_year"
+          value={form.rental_rate_per_year || ''}
+          onChange={handleChange}
+        />
+</div>
 
 
 <div className="form-row">
@@ -139,9 +162,26 @@ export default function EditLeasePage() {
           onChange={handleChange}
         />
 </div>
-        <button type="submit" style={{ marginTop: '1rem', padding: '0.5rem 1rem' }}>
+        <button className="light-blue-button" type="submit" style={{ marginTop: '1rem', padding: '0.5rem 1rem' }}>
           Save
         </button>
+
+        <button
+        className='blue-button'
+  type="button"
+  onClick={handleDelete}
+  style={{
+    marginTop: '1rem',
+    padding: '0.5rem 1rem',
+ 
+    color: 'white',
+    border: 'none',
+    borderRadius: '4px',
+    cursor: 'pointer'
+  }}
+>
+  Delete Lease
+</button>
       </form>
     </div>
   )

@@ -13,6 +13,7 @@ export default function AddLeasePage() {
     lease_start: '',
     lease_end: '',
     square_footage:'',
+    rental_rate_per_year:'',
     rental_rate: '',
     annual_rent:"",
     renewal_options: '',
@@ -67,7 +68,10 @@ export default function AddLeasePage() {
         <label>Square Footage</label>
         <input  name="square_footage" onChange={handleChange} />
 
-        <label>Rental Rate</label>
+        <label>Rental Rate sqf/year</label>
+        <input  name="rental_rate_per_year" onChange={handleChange} />
+
+        <label>Monthly Rent</label>
         <input  name="rental_rate" onChange={handleChange} />
         
         <label>Annual Rent</label>
