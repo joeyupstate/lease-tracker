@@ -71,13 +71,24 @@ export default function EditLeasePage() {
       <form onSubmit={handleSubmit} style={{ maxWidth: '500px' }}className="lease-form-inline">
       <div className="form-row">
         <label>Property Address</label>
-        <input
-          name="property_address"
-          value={form.property_address}
-          onChange={handleChange}
-          required
-        />
-        </div>
+        <select
+  id="property_address"
+  name="property_address"
+  value={form.property_address}
+  onChange={(e) => setFormData({ ...form, property_address: e.target.value })}
+>
+  <option value="">Select an address</option>
+  <option value="646 Plamk Road">646 Plamk Road</option>
+  <option value="13 Corporate Drive">13 Corporate Drive</option>
+  <option value="16 Corporate Drive">16 Corporate Drive</option>
+  <option value="7 Corporate Drive">7 Corporate Drive</option>
+  <option value="4 Rosell Drive">4 Rosell Drive</option>
+  <option value="2 Rosell Drive">2 Rosell Drive</option>
+  <option value="320 Ushers Road">320 Ushers Road</option>
+</select>
+
+
+ </div>
         <div className="form-row">
         <label>Tenant Name</label>
         <input
