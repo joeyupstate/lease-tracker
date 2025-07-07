@@ -128,7 +128,7 @@ export default function EditLeasePage() {
 
 <div className="form-row">
         <label>Rental Rate sqf/year</label>
-        <input
+        <textarea
         //   type="number"
           name="rental_rate_per_year"
           value={form.rental_rate_per_year || ''}
@@ -139,7 +139,7 @@ export default function EditLeasePage() {
 
 <div className="form-row">
         <label>Monthly Rent</label>
-        <input
+        <textarea
         //   type="number"
           name="rental_rate"
           value={form.rental_rate || ''}
@@ -148,7 +148,7 @@ export default function EditLeasePage() {
 </div>
 <div className="form-row">
         <label>Annual Rent</label>
-        <input
+        <textarea
         //   type="number"
           name="annual_rent"
           value={form.annual_rent || ''}

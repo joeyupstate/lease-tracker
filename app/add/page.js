@@ -87,13 +87,13 @@ export default function AddLeasePage() {
         <input  name="square_footage" onChange={handleChange} />
 
         <label>Rental Rate sqf/year</label>
-        <input  name="rental_rate_per_year" onChange={handleChange} />
+        <textarea  name="rental_rate_per_year" onChange={handleChange} />
 
         <label>Monthly Rent</label>
-        <input  name="rental_rate" onChange={handleChange} />
+        <textarea  name="rental_rate" onChange={handleChange} />
         
         <label>Annual Rent</label>
-        <input  name="annual_rent" onChange={handleChange} />
+        <textarea  name="annual_rent" onChange={handleChange} />
    
         <label>Renewal Options</label>
         <textarea name="renewal_options" onChange={handleChange} />
